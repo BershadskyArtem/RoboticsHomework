@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+      <PackageReference Include="ReactiveUI" Version="18.4.26" />
+      <PackageReference Include="ReactiveUI.Fody" Version="18.4.26" />
+      <PackageReference Include="ReactiveUI.Validation" Version="3.1.7" />
+      <PackageReference Include="ReactiveUI.WPF" Version="18.4.26" />
+      <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="Views\MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+</Project>
